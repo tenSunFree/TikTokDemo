@@ -18,3 +18,7 @@ https://play.google.com/store/apps/details?id=com.ss.android.ugc.trill
   <img src="https://i.imgur.com/ccIXR3P.png" width="260"/>
   <img src="https://i.imgur.com/vNp44WX.png" width="260"/>
 </p> 
+
+備註
+--------
+圖片資源僅供學習交流之用, 請勿用於商業用途, 如有侵權請聯繫刪除, 謝謝
