@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_background">
+
+        <fr.castorflex.android.verticalviewpager.VerticalViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- 浮在影片上方的選項介面 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 狀態欄 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+
+            <!-- 搜尋欄 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/searchImageView"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/icon_search"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推薦"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="1pt"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#c4c7d0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="最新"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9.7">
+
+            </LinearLayout>
+
+            <!-- 分隔線 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                tools:ignore="Suspicious0dp">
+
+                <View
+                    android:layout_weight="0.5"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:id="@+id/separationLineView3"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:id="@+id/separationLineView1"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:id="@+id/separationLineView2"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:id="@+id/separationLineView4"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+
+                <View
+                    android:layout_weight="0.5"
+                    android:background="#50ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"/>
+            </LinearLayout>
+
+            <!-- 底部按鈕欄 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="26dp"
+                    android:src="@drawable/icon_bottom1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:src="@drawable/icon_bottom2"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/icon_bottom3"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:src="@drawable/icon_bottom4"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginRight="26dp"
+                    android:src="@drawable/icon_bottom5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 最頂層的遮蔽背景, 為了顯示圓角效果 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_root_background3"/>
+    </RelativeLayout>
+</LinearLayout>

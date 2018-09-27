@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/room_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"/>
+
+        <!-- 主要內容欄 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9.7"
+            android:orientation="horizontal">
+
+            <!-- 左半部 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:gravity="left|bottom"
+                android:orientation="vertical">
+
+                <!-- 使用Unicode码顯示符號, 比如說@ -->
+                <TextView
+                    android:id="@+id/authorNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="17dp"
+                    android:text="\u0040小海鷗"
+                    android:textColor="#ebedf2"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/authorContentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="17dp"
+                    android:text="#深海 #飛翔"
+                    android:textColor="#ebedf2"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/icon_tiktok"/>
+
+                    <com.home.tiktokdemo.widget.MarqueeTextView
+                        android:id="@+id/songNameMTextView"
+                        android:layout_width="165dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="原聲 - 小海鷗 - 小海鷗    原聲 - 小海鷗 - 小海鷗    原聲 - 小海鷗 - 小海鷗"
+                        android:textColor="#e7e7e7"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 右半部 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.2"
+                android:gravity="right|bottom"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="45dp"
+                    android:layout_height="59dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginRight="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatarCircleImageView"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_right_avatar1"
+                        app:civ_border_color="#ffffff"
+                        app:civ_border_width="1dp"/>
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_right_avatar_add"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_right1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="13dp"
+                    android:text="27.6k"
+                    android:textColor="#ecedee"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_right2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="20dp"
+                    android:text="69"
+                    android:textColor="#ecedee"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_right3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginRight="18dp"
+                    android:text="分享"
+                    android:textColor="#ecedee"
+                    android:textSize="10sp"/>
+
+                <FrameLayout
+                    android:id="@+id/rotateFrameLayout"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_right4"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatarCircleImageView2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_right_avatar1"
+                        app:civ_border_color="#ffffff"
+                        app:civ_border_width="0dp"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/playImageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_play"
+        android:visibility="invisible"/>
+</RelativeLayout>
